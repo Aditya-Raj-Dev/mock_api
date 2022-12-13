@@ -2,10 +2,11 @@ const express =require("express")
 const connection = require("./database/db")
 const UserModel=require("./Model/model")
 const EmiModel =require("./Model/Emi.model")
+const cors = require("cors")
 
 const app=express()
 app.use(express.json())
-
+app.use(cors())
 
 app.get("/",async(req,res)=>{
     res.send("welcome")
