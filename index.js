@@ -40,7 +40,7 @@ app.post("/login",async (req,res)=>{
     const {email,password}=req.body;
     const user=await UserModel.findOne({email})
     console.log(user)
-    if(user){
+    if(user.email===email && user.password===password){
         res.send({"msg":"Login Successfull"})
     }
     else{
