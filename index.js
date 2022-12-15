@@ -47,7 +47,7 @@ app.use("/list",ListRouter)
 //     }
 //   })
 
-app.listen(8080,async()=>{
+app.listen(8081,async()=>{
     try{
         await connection
         console.log("database connnected")
